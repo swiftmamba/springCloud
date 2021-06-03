@@ -1,0 +1,21 @@
+#server.port=8101
+#spring.application.name=spring-cloud-eureka-provider-hystrix
+#eureka.client.service-url.defaultZone=http://eureka7001.com:7001/eureka/,\
+#  http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#eureka.instance.prefer-ip-address=true
+
+#\u7AEF\u53E3
+server:
+  port: 8003
+#\u9879\u76EE\u540D
+spring:
+  application:
+    name: spring-hystrix
+#\u8BBF\u95EE\u5730\u5740\u6307\u5B9A\u5730\u5740
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
+#\u6CE8\u518C\u670D\u52A1\u7684\u65F6\u5019\u6307\u5B9A\u4F7F\u7528ip\u5730\u5740\u8FDB\u884C\u6CE8\u518C
+  instance:
+    prefer-ip-address: false

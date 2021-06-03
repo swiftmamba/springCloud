@@ -1,0 +1,34 @@
+#server.port=9527
+#spring.application.name=spring-cloud-zuul-gateway
+#eureka.client.service-url.defaultZone=http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#eureka.instance.prefer-ip-address=true
+#\u914D\u7F6E\u6CE8\u518C\u5230Eureka\u4E2D\u7684\u670D\u52A1\u540D
+#eureka.client.instance.instance-id=gateway-9527.com
+#zuul
+#zuul.routes.hello-service.path=/SPRING-CLOUD-ZUUL-GATEWAY/**
+#zuul.routes.hello-service.serviceId=SPRING-CLOUD-ZUUL-GATEWAY
+
+server:
+  port: 9527
+
+spring:
+  application:
+    name: zuul-gateway
+
+eureka:
+  # client\u914D\u7F6E
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
+
+
+  # instance\u914D\u7F6E
+  instance:
+    prefer-ip-address: true
+    #\u914D\u7F6E\u6CE8\u518C\u5230Eureka\u4E2D\u7684\u670D\u52A1\u540D\uFF0C
+    instance-id: gateway-9527.com
+#zuul
+zuul:
+  routes:
+    swift-service.path: SPRING-CLOUD-ZUUL-GATEWAY/**
+    swift-service.serviceId: SPRING-CLOUD-ZUUL-GATEWAY
